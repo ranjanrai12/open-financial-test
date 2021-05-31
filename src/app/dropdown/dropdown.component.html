@@ -1,0 +1,11 @@
+<div class="custom-select">
+    <div class="select" (click)="shouldShowItem = !shouldShowItem">
+        <p id="selectedValue">{{ selectedValue }} Months</p>
+        <p id="downArrow"><i class="arrow-down"></i></p>
+    </div>
+    <ng-container *ngIf="shouldShowItem">
+        <div class="drop-down-item" *ngFor="let option of options">
+            <div class="option" (click)="selectedValue = option; shouldShowItem = false"> {{ option }} Months</div>
+        </div>
+    </ng-container>
+</div>

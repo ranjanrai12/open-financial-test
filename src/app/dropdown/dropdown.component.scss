@@ -1,0 +1,40 @@
+.custom-select {
+    width: 400px;
+    margin: auto;
+    margin-top: 10px;
+    .select {
+        width: 400px;
+        height: 50px;
+        border-bottom: 1px solid gray;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        #selectedValue {
+            margin: 0;
+            padding-top: 4%;
+        }
+        #downArrow {
+            margin-left: 290px;
+        }
+        .arrow-down {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+    }
+    .drop-down-item{
+        background-color: white;
+        border: 1px solid lightgray;
+        z-index: 2;
+        padding: 5px;
+        &:hover {
+            background-color: lightgray
+        }
+        .option {
+            cursor: pointer;
+        }
+    }
+}

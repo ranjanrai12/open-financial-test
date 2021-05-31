@@ -1,0 +1,12 @@
+<div class="slidecontainer">
+    <label for="sliderlabel"class="label">{{ sliderLabel }}</label>
+    <p>{{ rangeSilderValue | currency: 'INR'}}</p>
+    <input type="range" [min]="min" [max]="max" [value]="rangeSilderValue" class="slider" #sliderRange (input)="sliderChange($event)">
+    
+    <div class="slider-footer">
+        <span id="initial-range">{{ min | currency: 'INR' }}</span>
+        <span id="final-range">{{ max | currency: 'INR' }} </span>
+    </div>
+</div>
+
+

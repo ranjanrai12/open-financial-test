@@ -1,0 +1,55 @@
+<div class="main-container">
+    <div class="first-row">
+        <div class="column1">
+            <div class="super-simple"></div>
+            <div class="bottom-border"></div>
+            <div class="collect-image"></div>
+        </div>
+        <div class="column2">
+            <div class="eligibilityCal">
+                <h3 for="">Eligibility Counter</h3>
+                <app-range-slider [sliderLabel]="'Monthly Income'" [min]="100000" [max]="300000" [initialValue]="150000"></app-range-slider>
+                <app-range-slider [sliderLabel]="'Monthly Expense'" [min]="0" [max]="100000"></app-range-slider>
+                <app-dropdown></app-dropdown>
+                <app-slide-toogle (toggleEvent) = "existingLoan = $event"></app-slide-toogle>
+                <div class="loanContainer" *ngIf="existingLoan">
+                    <p class="label">Emi of existing loan (optional)</p>
+                    <input type="text" class="loanfield" [ngModelOptions]="{ updateOn: 'blur' }" [ngModel]="loanAmount | currency : 'INR'" (ngModelChange)="onAmountChange($event)">
+                </div>
+            </div>
+            <div class="moneyContainer">
+                <div>
+                    <label style="text-align: center; opacity: 0.5;">Loan Amount</label>
+                    <div>{{ 100000 | currency: "&#8377;" }} </div>
+                </div>
+                <div>
+                    <label style="text-align: center; opacity: 0.5;">Your EMI will be</label>
+                    <div class="amount">{{ 15000 | currency: "&#8377;" }}</div>
+                </div>
+                <div>
+                    <button>GET MONEY</button>
+                </div>
+            </div>
+        </div>
+        <div class="column3">
+        </div>
+    </div>
+    <!-- Fotter card container-->
+    <div class="second-row">
+        <div class="column1">
+            <div class="card1"></div>
+            <div class="card2"></div>
+            <div class="card3"></div>
+        </div>
+        <div class="column2">
+            <div class="card1"></div>
+            <div class="card2"></div>
+        </div>
+        <div class="column3">
+            <div class="business_open"></div>
+            <div class="business_border"></div>
+            <div class="business_description"></div>
+            <button class="openAccount_button">Get an Open Account</button>
+        </div>
+    </div>
+</div>

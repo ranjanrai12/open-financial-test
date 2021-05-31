@@ -1,0 +1,8 @@
+<!-- Slide Toggle-->
+<div class="toggle-container">
+    <span class="label">Do you have any existing loans?</span>
+    <div (click)="onToggleClick($event)" class="toggle" [ngClass]="off ? 'toggle-empty' : 'toggle-filled'">
+        <div *ngIf="off" class="slide-left"></div>
+        <div *ngIf="!off" class="slide-right"></div>
+    </div>
+</div>
