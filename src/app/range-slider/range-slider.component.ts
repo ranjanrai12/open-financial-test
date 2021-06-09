@@ -6,7 +6,7 @@ import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./range-slider.component.scss']
 })
 export class RangeSliderComponent implements OnInit {
-  @ViewChild('slider', { static: false }) slider: ElementRef;
+  @ViewChild('slider') slider: ElementRef;
   rangeSilderValue = 15000;
 
   @Input () min = 100000;

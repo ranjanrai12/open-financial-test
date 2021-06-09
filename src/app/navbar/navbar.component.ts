@@ -7,7 +7,7 @@ import { Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild } fro
 })
 export class NavbarComponent implements OnInit {
 
-  @ViewChild('topNavbar', {static: false}) topNavbar: ElementRef;
+  @ViewChild('topNavbar') topNavbar: ElementRef;
 
   constructor(
     private render: Renderer2
