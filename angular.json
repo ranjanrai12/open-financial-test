@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "open-financial-test"
+    }
+  },
+  "defaultProject": "open-financial-test",
+  "cli": {
+    "analytics": "9260ad1f-4c5f-49b4-aeba-9ac796bd17f7"
+  }
 }
