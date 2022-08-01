@@ -1,0 +1,8 @@
+library 'angularService'
+
+//Call jenkins library
+angularApp {
+    enableXray = false
+    skipNpmTests = false
+    angularPodMemory = '6Gi'
+}
